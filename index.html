@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play List</title>
+
+    
+    <script src="https://kit.fontawesome.com/cb06fec0a1.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- müsik taşıyıcı -->
+    <div class="music-player">
+        <button id="play-list">
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <img src="./assets/images/müslüm-1.jpeg" alt="" id="song-image">
+        <div class="song-details">
+            <p id="song-name"></p>
+            <p id="song-artist"></p>
+        </div>
+        <!-- oynatma seçenekleri -->
+        <div class="player-options">
+            <button id="shuffle">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+            <button id="prev">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button id="play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="pause" class="hide">
+                <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="next" >
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+            <button id="repeat">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+        </div>
+
+        <!-- ses -->
+        <audio src="./assets/music/Adını Sen Koy (Müslüm Gürses) Official Audio adınısenkoy müslümgürses - Esen Müzik.mp3" preload="metadata" id="audio"></audio>
+        <div id="progress-bar">
+            <div id="current-progress"></div>
+        </div>
+
+        <!-- zaman -->
+        <div class="time-container">
+            <div id="current-time">
+            </div>
+            <div id="max-duration"></div>
+        </div>
+        <!-- playlist container -->
+        <div id="play-list-container" class="hide">
+            <button id="close-button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <ul id="play-list-songs"></ul>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
